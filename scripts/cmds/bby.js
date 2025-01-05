@@ -1,4 +1,4 @@
-const axios = require('axios');
+ const axios = require('axios');
 const baseApiUrl = async () => {
   const base = await axios.get('https://raw.githubusercontent.com/Blankid018/D1PT0/main/baseApiUrl.json');
   return base.data.api;
@@ -145,7 +145,7 @@ module.exports.onChat = async ({ api, event,message }) => {
     const body = event.body ? event.body.toLowerCase() : ""
     if(body.startsWith("baby") || body.startsWith("bby") || body.startsWith("janu")){
       const arr = body.replace(/^\S+\s*/, "")
-      if(!arr){ api.sendMessage("আমাকে না😀,ডেকে আমার বস কে  একটা gf দে🫦😰", event.threadID, (error, info) => {
+      if(!arr){ api.sendMessage(" ভাগ আমি 😀,লুচ্চার সাথে কথা বলিনা তুই ১২ ভাতারী আমি জানি🤪🫦😰", event.threadID, (error, info) => {
       global.GoatBot.onReply.set(info.messageID, {
         commandName: this.config.name,
         type: "reply",
