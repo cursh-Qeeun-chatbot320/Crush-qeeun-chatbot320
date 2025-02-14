@@ -19,11 +19,12 @@
   "adminBot": [
     "61569854674467",
     "61571017966945",
-    "61572247694097"
+    "61572247694097",
+    "61572987578533"
   ],
   "whiteListMode": {
     "enable": false,
-    "whiteListIds": [ "61569854674467","61572247694097","61571017966945" ],
+    "whiteListIds": [ "61569854674467","61572247694097","61571017966945","61572987578533" ],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
   "nickNameBot": "crush qeeun🥰😘",
