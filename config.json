@@ -20,11 +20,12 @@
     "61569854674467",
     "61571017966945",
     "61572247694097",
-    "61573125544580"
+    "61573125544580",
+    "61573858162298"
   ],
   "whiteListMode": {
     "enable": false,
-    "whiteListIds": [ "61569854674467","61572247694097","61571017966945","61573125544580" ],
+    "whiteListIds": [ "61569854674467","61572247694097","61571017966945","61573125544580","61573858162298" ],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
   "nickNameBot": "crush qeeun🥰😘",
