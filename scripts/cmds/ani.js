@@ -21,8 +21,8 @@ async function fetchTikTokVideos(query) {
 module.exports = {
   config: {
     name: "ani",
-    aliases: [],
-    author: "Vex_kshitiz",
+    aliases: ["cxly"],
+    author: "Rm-Cxly-King",
     version: "1.0",
     shortDescription: {
       en: "get anime edit",
@@ -36,7 +36,7 @@ module.exports = {
     },
   },
   onStart: async function ({ api, event, args }) {
-     api.setMessageReaction("✨", event.messageID, (err) => {}, true);
+     api.setMessageReaction("🐼", event.messageID, (err) => {}, true);
     const query = args.join(' ');
     const modifiedQuery = `${query} anime edit`;
 
