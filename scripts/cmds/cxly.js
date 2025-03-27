@@ -1,4 +1,4 @@
-.cmd install cxly.js module.exports = {
+module.exports = {
     config: {
         name: "cxly",
         version: "1.0",
