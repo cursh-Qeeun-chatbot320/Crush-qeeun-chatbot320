@@ -1,4 +1,4 @@
-module.exports = {
+.cmd install cxly.js module.exports = {
     config: {
         name: "cxly",
         version: "1.0",
@@ -86,7 +86,7 @@ module.exports = {
 
         const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
         return message.reply({
-            body: `🥀 ${name} 🥀\n\n${randomQuote}`,
+            body: `🐼 ${name} 🌺\n\n${randomQuote}`,
             mentions: [{ id: uid, tag: name }]
         });
     }
