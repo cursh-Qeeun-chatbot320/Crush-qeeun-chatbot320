@@ -18,8 +18,8 @@ async function fetchTikTokVideos(query) {
 module.exports = {
   config: {
     name: "fyp",
-    aliases: ["tiktok", "tikdl"],
-    author: "Mahi--",
+    aliases: ["Rm", "video"],
+    author: "Rm_Cxly_King",
     version: "2.1",
     shortDescription: {
       en: "Search for TikTok anime edit videos",
@@ -33,7 +33,7 @@ module.exports = {
     },
   },
   onStart: async function ({ api, event, args }) {
-    api.setMessageReaction("✨", event.messageID, (err) => {}, true);
+    api.setMessageReaction("🐼", event.messageID, (err) => {}, true);
 
     const query = args.join(' ');
 
@@ -64,7 +64,7 @@ module.exports = {
       const videoStream = await getStreamFromURL(videoUrl);
 
       await api.sendMessage({
-        body: `🎥 Video Title: ${title}\n\nHere's the video you requested!`,
+        body: `🐼Cxly🌺 Video Title: ${title}\n\nHere's the video you requested!`,
         attachment: videoStream,
       }, event.threadID, event.messageID);
     } catch (error) {
