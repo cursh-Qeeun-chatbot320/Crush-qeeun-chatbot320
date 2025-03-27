@@ -1,6 +1,6 @@
 module.exports = {
     config: {
-        name: "bot",
+        name: "cxly",
         version: "1.0",
         author: "Aryan",
         countDown: 5,
