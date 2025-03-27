@@ -5,8 +5,8 @@ module.exports = {
         author: "Aryan",
         countDown: 5,
         role: 0,
-        shortDescription: "bot",
-        longDescription: "bot",
+        shortDescription: "cxly",
+        longDescription: "cxly",
         category: "Fun",
         guide: {
             en: "{pn} text"
@@ -67,7 +67,7 @@ module.exports = {
             "Ao kabhi haweli pe😍"
         ];
 
-        const Prefixes = ['bot', 'Bot'];
+        const Prefixes = ['cxly', 'cxly'];
 
         if (!event.body) return;
 
