@@ -1,12 +1,12 @@
 module.exports = {
     config: {
-        name: "cxly",
+        name: "rm",
         version: "1.0",
         author: "Aryan",
         countDown: 5,
         role: 0,
-        shortDescription: "cxly",
-        longDescription: "cxly",
+        shortDescription: "rm",
+        longDescription: "rm",
         category: "Fun",
         guide: {
             en: "{pn} text"
