@@ -21,14 +21,14 @@ module.exports = {
 
         const response = {
             body: `╭━─━─≪✠≫─━╮
-┃🤖 cxly bot uptime┃
+┃🐼 cxly bot uptime😽┃
 ╰━──≪✠≫──━╯
 ┣⏳ days: ${days}  
 ┣⏱️ hours: ${hours}  
 ┣⌛ minutes: ${minutes}  
 ┣⏳ second : ${seconds}  
 ┣━━━━━━≪✠≫━━━━━━┫
-┣👥 all mambars: ${(await usersData.getAll()).length}  
+┣👥 all botuser: ${(await usersData.getAll()).length}  
 ┣🌺 box: ${(await threadsData.getAll()).length}  
 ╰━━━━━━≪✠≫━━━━━━╯`,
             attachment: await global.utils.getStreamFromURL(iURL)
