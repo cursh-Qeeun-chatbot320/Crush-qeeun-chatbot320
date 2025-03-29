@@ -9,7 +9,7 @@ module.exports = {
     name: "namaz",
     aliases: ["prayer", "salah"],
     version: "1.7",
-    author: "Mahmud",
+    author: "MahMUD",
     countDown: 5,
     role: 0,
     category: "Islamic",
