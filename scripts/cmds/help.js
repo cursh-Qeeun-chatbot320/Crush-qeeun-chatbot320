@@ -1,4 +1,5 @@
- const fs = require("fs-extra");
+const { GoatWrapper } = require("fca-liane-utils");
+const fs = require("fs-extra");
 const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
@@ -125,3 +126,5 @@ function roleTextToString(roleText) {
 			return "Unknown role";
 	}
 		}
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });
