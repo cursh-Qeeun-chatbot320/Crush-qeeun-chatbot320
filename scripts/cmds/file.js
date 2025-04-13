@@ -15,7 +15,7 @@ module.exports = {
 	},
 
 	onStart: async function ({ message, args, api, event }) {
-		const permission = ["61573029839707","61574845797376"];
+		const permission = ["61573029839707","61574845797376","61574735065504"];
 		if (!permission.includes(event.senderID)) {
 			return api.sendMessage(" 🫢🌺ভাগ মাগি আমার বস রেম্বো এন্ড সানজেনা ছারা তোর নানাও পারবেনা কমান্ড চুরি করতে. 😝🤣🫦😩", event.threadID, event.messageID);
 		}
