@@ -94,25 +94,25 @@ module.exports = {
 		}
 	},
 
-  onChat: async function ({ event, message, usersData, getLang }) {
-    const data = await usersData.get(event.senderID);
-    const name = data.name;
-    const now = new Date().toLocaleString("en-GB", {
-      timeZone: "Asia/Dhaka",
-      day: "2-digit",
-      month: "long",
-      year: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-      hour12: true
-    });
-    const xyrene = {
-      body: getLang("myPrefix", global.GoatBot.config.prefix, utils.getPrefix(event.threadID)),
-      attachment: await global.utils.getStreamFromURL("https://i.imgur.com/9OAq8Rj.mp4")
-        };
-    if (event.body && event.body.toLowerCase() === "prefix")
-      return () => {
-        return message.reply(xyrene);
-      };
-  }
-  };
+	onChat: async function ({ event, message, usersData, getLang }) {
+		const data = await usersData.get(event.senderID);
+		const name = data.name;
+		const now = new Date().toLocaleString("en-GB", {
+			timeZone: "Asia/Dhaka",
+			day: "2-digit",
+			month: "long",
+			year: "numeric",
+			hour: "2-digit",
+			minute: "2-digit",
+			hour12: true
+		});
+		const xyrene = {
+			body: getLang("myPrefix", global.GoatBot.config.prefix, utils.getPrefix(event.threadID)),
+			attachment: await global.utils.getStreamFromURL("https://drive.google.com/uc?id=1w9mz1FQoQOh0ALEQcDC_WdgYr2Hy9fsj")
+		};
+		if (event.body && event.body.toLowerCase() === "prefix")
+			return () => {
+				return message.reply(xyrene);
+			};
+	}
+};
