@@ -1,5 +1,4 @@
-const { GoatWrapper } = require("fca-liane-utils");
-const fs = require("fs-extra");
+ const fs = require("fs-extra");
 const { utils } = global;
 
 module.exports = {
@@ -37,7 +36,7 @@ module.exports = {
 			confirmThisThread: "Vui lòng thả cảm xúc bất kỳ vào tin nhắn này để xác nhận thay đổi prefix trong nhóm chat của bạn",
 			successGlobal: "Đã thay đổi prefix hệ thống bot thành: %1",
 			successThisThread: "Đã thay đổi prefix trong nhóm chat của bạn thành: %1",
-			myPrefix: "🌐 Prefix của hệ thống: %1\n🛸 Prefix của nhóm bạn: %2"
+			myPrefix: "😚 Prefix của hệ thống: %1\n🐼 Prefix của nhóm bạn: %2"
 		},
 		en: {
 			reset: "Your prefix has been reset to default: %1",
@@ -46,7 +45,7 @@ module.exports = {
 			confirmThisThread: "Please react to this message to confirm change prefix in your box chat",
 			successGlobal: "Changed prefix of system bot to: %1",
 			successThisThread: "Changed prefix in your box chat to: %1",
-			myPrefix: "🌐 System prefix: %1\n🛸 Your box chat prefix: %2"
+			myPrefix: "╭━━━━━━ [ 𝚈𝙾𝚄𝚁 🌺cxly🌺 ] ━━━━━━╮\n┃🕴️ 𝚂𝚈𝚂𝚃𝙴𝙼 🌺cxly🌺 𝙿𝚁𝙴𝙵𝙸𝚇: [ %1 ]\n┃🌺 𝚈𝙾𝚄𝚁 🐼cxly🐼 𝙱𝙾𝚇 𝙲𝙷𝙰𝚃 𝙿𝚁𝙴𝙵𝙸𝚇: [ %2 ]\n┃🐼 𝙳𝙰𝚃𝙴 & 𝚃𝙸𝙼𝙴: ${now}\n╰━━━━━━━━━━━━━━━━━━━━━━╯"
 		}
 	},
 
@@ -95,12 +94,25 @@ module.exports = {
 		}
 	},
 
-	onChat: async function ({ event, message, getLang }) {
-		if (event.body && event.body.toLowerCase() === "prefix")
-			return () => {
-				return message.reply(getLang("myPrefix", global.GoatBot.config.prefix, utils.getPrefix(event.threadID)));
-			};
-	}
-};
-const wrapper = new GoatWrapper(module.exports);
-wrapper.applyNoPrefix({ allowPrefix: true });
+  onChat: async function ({ event, message, usersData, getLang }) {
+    const data = await usersData.get(event.senderID);
+    const name = data.name;
+    const now = new Date().toLocaleString("en-GB", {
+      timeZone: "Asia/Dhaka",
+      day: "2-digit",
+      month: "long",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true
+    });
+    const xyrene = {
+      body: getLang("myPrefix", global.GoatBot.config.prefix, utils.getPrefix(event.threadID)),
+      attachment: await global.utils.getStreamFromURL("https://i.imgur.com/9OAq8Rj.mp4")
+        };
+    if (event.body && event.body.toLowerCase() === "prefix")
+      return () => {
+        return message.reply(xyrene);
+      };
+  }
+  };
